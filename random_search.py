@@ -24,8 +24,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+
 def get_action(s,w):
     return 1 if s.dot(w) > 0 else 0
+
+
+def reset(self):
+    if hasattr(self.env, 'monitor'):
+        if hasattr(self.env.monitor, 'stats_recorder'):
+            self.env.monitor.stats_recorder.done = True
+    return self.env.reset()
 
 def play_one_episode(env, params):
     observation = env.reset()
