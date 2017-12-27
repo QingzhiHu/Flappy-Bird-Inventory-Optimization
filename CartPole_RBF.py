@@ -119,7 +119,8 @@ class Modelnew:
             iters += 1
         return totalreward
     
-    if __name__ == '__main__':
+    def main():
+    #if __name__ == '__main__':
         env = gym.make('CartPole-v0')
         ft = FeatureTransformer(env)
         model = Model(env, ft)
