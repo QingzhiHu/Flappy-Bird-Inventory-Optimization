@@ -12,7 +12,7 @@ from builtins import range
 import numpy as np
 import theano
 import theano.tensor as T
-import Mountain_car
+import CartPole_RBF
 
 class SGDRegressor:
     def __init__(self, D):
@@ -49,9 +49,9 @@ class SGDRegressor:
     
     if __name__ == '__main__':
     
-    Mountain_car.SGDRegressor = SGDRegressor
+        CartPole_RBF.SGDRegressor = SGDRegressor
     
-    Mountain_car.main()
+        CartPole_RBF.main()
     
     
 
