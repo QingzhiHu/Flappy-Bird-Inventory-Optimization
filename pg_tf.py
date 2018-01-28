@@ -19,7 +19,7 @@ from gym import wrappers
 from datetime import datetime
 from q_learning_bins import plot_running_avg, FeatureTransformer, plot_cost_to_go
 
-# graident ascent...a linear model on top of RBF kernels
+# graident ascent...a linear layer on top of RBF kernels
 # so you can test different architectures
 class HiddenLayer:
   def __init__(self, M1, M2, f=tf.nn.tanh, use_bias=True, zeros=False):
